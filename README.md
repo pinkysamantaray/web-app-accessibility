@@ -35,13 +35,14 @@ _Privacy issues and why we shouldn’t detect screen readers. [It would take awa
 - A11y(numeronym for accessibility), 
 - WCAG(web content accessibility guidelines) 2.2(developed in the open on GitHub, backwards-compatible)[https://www.w3.org/WAI/standards-guidelines/wcag/], 
 - ARIA(Accessible Rich Internet Applications)[https://www.w3.org/TR/wai-aria-1.2/], [https://www.w3.org/WAI/ARIA/apg/patterns/]
-- WebAIM[https://webaim.org/articles/],
+- WebAIM[https://webaim.org/articles/](explores screen readers, platforms through real surveys, and feedbacks),
 - MDN[https://developer.mozilla.org/en-US/docs/Web/Accessibility], 
 - web.dev[https://web.dev/accessibility]
+- Deque University ARIA Examples[https://dequeuniversity.com/library/]
 
 #### Platform Accessibility APIs: Apple, windows, Android each have their own APIs. 
-- Screen readers: NVDA in windows(free, opensource), VO in Mac
-- Voice over in webkit is different to the read aloud in browsers in Mac
+- Screen readers: VoiceOver in Mac-iOS, NVDA in windows(free, open-source)
+- Voice over in webkit is different to the read aloud in browsers in Mac.
 
 
 #### The Accessibility Tree: a tree structure created with accessibility APIs and web browsers to expose relevant accessibility information
@@ -57,7 +58,7 @@ examples: https://target.com
     Names are always announced, 
     For example, the accessible name for a `<button>`, `<a>`, or `<td>` comes from the text between the opening and closing tags. 
     Other elements, such as form `<textarea>`, `<fieldset>`, and `<table>` get their accessible name from the content of associated elements; for these elements, the accessible name comes from the `<label>` with a for attribute, `<legend>`, and `<caption>` respectively. 
-    aria-label(if the default is missing) and aria-labelledby/aria-describedby(reference) attributes, and even title(mouse hover) and placeholder
+    aria-label(if the default is missing) and aria-labelledby/aria-describedby(reference to an entire template) attributes, and even title(mouse hover) and placeholder
     https://www.w3.org/TR/accname-1.2/
 * lists: yes to `ul` `ol`, `datalist`: no 
 * landmark elements like section, nav, headers etc, props like aria-label, aria-labelledby, aria-hidden, avoid DIV Soup
@@ -65,14 +66,15 @@ examples: https://target.com
 * the property **role** > \
     `<button>`  implicit 'button' role \
     `<div role="button">` explicit 'button' role 
-* ARIA live regions provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies[https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions] ex: amazon search box
-* Tabindex -1 and TabIndex 0-5..order > focus management on dynamic content through JS; 
+* tabindex 0(focusable) and -1(not focusable); TabIndex 0-5..order > focus management on dynamic content through JS 
+* ARIA live regions provide a way to programmatically expose dynamic content changes(hydration) in a way that can be announced by assistive technologies[https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions] ex: amazon search box
 * The 'inert' attribute > makes the browser ignore input events sent by the user, including focus-related events and events from assistive technologies.
 * WCAG actually mentions 18pt text, which is a unit we don’t use on the web. 18pt = 24px
 * CSS ex: .sr-only in Tailwind, 
 * some tools:
-    - [Chakra ui](https://www.chakra-ui.com/)
+    - [Web Accessibility Checklist](https://dequeuniversity.com/checklists/web/)
     - Will your code work with assistive technologies?[https://a11ysupport.io/]
+    - [Chakra ui](https://www.chakra-ui.com/)
     - [AssistivLabs](https://assistivlabs.com/) to run screen readers in the cloud
 
  
@@ -91,6 +93,7 @@ Things to consider: Don’t rely on auto-generated captions, don't write unneces
 example: [HTML5 video caption/subtitle demo](https://codepen.io/JediLin/pen/jpzgpv)
 
 ### Reduce motion 
+[prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
 Non-animated by default, only moving if the setting exists and is unchecked (leveraging prefers-reduced-motion: no-preference)
 
     CSS:
@@ -150,29 +153,39 @@ Non-animated by default, only moving if the setting exists and is unchecked (lev
     darkModeQuery.addEventListener('change', handleDarkModeChanged);
     handleDarkModeChanged();
 
+### Color contrast 
+[Use of distinguishable colors](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.0#qr-visual-audio-contrast-contrast)
 
+
+<br/>
 
 # Testing a11y
 * Keyboard Navigation: tab key, skip links, esc key, use of arrow keys, space key to select/deselect
 * Zoom to 200% to check reflow of layouts, components, responsive designs
 * use of voice over screen reader
-* Devtools testing - Chrome(Accessibilty Information Tab, lighthouse, color contrast checker), firefox(contrast ratio inspector), 
+* Devtools testing - Chrome(Accessibilty Information Tab, lighthouse, [color contrast checker](https://developer.chrome.com/docs/devtools/accessibility/contrast#fix-low-contrast)), firefox(contrast ratio inspector), 
 * visual modes: light/dark, high contrast mode
 * missing transcripts or captions for media contents
 * Accessibility Insights for Web from Microsoft is another great tool!
 
 
 # Working with teams
-* Keyboard Navigation: NO MOUSE days 
+* Encourage accessibility culture like doing Keyboard Navigation: NO MOUSE days 
 * Make accessibility part of the definition of done, Access-debt like tech-debt
 * Break problems down into smaller, solvable parts and phases, Build in iteration, continuous process
-* take accountability(if there is a lawsuit, who is responsible?) convince leadership and business stakeholders
 * PR Reviews are an excellent time to provide accessibility feedback.
 * Use consistent tooling and processes across an organization
+* Take accountability(if there is a lawsuit, who is responsible?) convince leadership and business stakeholders
 * a11y compliant: It's a constant work in progress.
 
 
-These notes are derived from accessibility courses by Marcy Sutton Todd.
-Cheers!
+
+
+\
+\
+_Don't try too hard and make accessibility experience hard! Avoid dark anti patterns_
+
+Notes derived from accessibility courses by Marcy Sutton Todd.
+
 
 [Every HTML element](https://iamwillwang.com/dollar/every-html-element/)
