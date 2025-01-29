@@ -52,7 +52,7 @@ examples: https://target.com
 
 # Semantic HTML basics 
 * Use of headings h1-h6
-* Skip Links ex: #header, #content, (navigate through sections), good for SEOs, good for overall structure of the page
+* [Skip-links](https://dequeuniversity.com/rules/axe/4.10/skip-link) ex: #header, #content, (navigate through sections), good for SEOs, good for overall structure of the page
 * Element level vs. page level language `lang="fr"` for VO
 * Accessible names: 
     Names are always announced, 
@@ -165,7 +165,7 @@ Non-animated by default, only moving if the setting exists and is unchecked (lev
     and what can’t be(Focus order, Text alternative quality, Screen reader testing, Contrast over images/gradients)
 * Approach: Linting, Unit tests(Jest, Jest DOM, Testing Library), Integration testing([Cypress](https://github.com/component-driven/cypress-axe) or WebdriverIO), E2E testing, actual user testing and feedback for your product
 * Keyboard Navigation: tab key, skip links, esc key, use of arrow keys, space key to select/deselect
-* Zoom to 200% to check reflow of layouts, components, responsive designs
+* Zoom to 200% to check [reflow](https://www.w3.org/TR/WCAG22/#reflow) of layouts, components, responsive designs
 * Use of voice over screen reader
 * Devtools testing - Chrome(Accessibilty Information Tab, lighthouse, [color contrast checker](https://developer.chrome.com/docs/devtools/accessibility/contrast#fix-low-contrast)), firefox(contrast ratio inspector), 
 * Visual modes: light/dark, high contrast mode
