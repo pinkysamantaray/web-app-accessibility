@@ -33,7 +33,7 @@ _Privacy issues and why we shouldn’t detect screen readers. [It would take awa
 
 # Web Standards and Definitions
 - A11y(numeronym for accessibility), 
-- WCAG(web content accessibility guidelines) 2.2(developed in the open on GitHub, backwards-compatible)[https://www.w3.org/WAI/standards-guidelines/wcag/], 
+- WCAG(web content accessibility guidelines) 2.2(developed in the open on GitHub, backwards-compatible)[https://www.w3.org/WAI/standards-guidelines/wcag/] Levels of Conformance A, AA, AAA, 
 - ARIA(Accessible Rich Internet Applications)[https://www.w3.org/TR/wai-aria-1.2/], [https://www.w3.org/WAI/ARIA/apg/patterns/]
 - WebAIM[https://webaim.org/articles/](explores screen readers, platforms through real surveys, and feedbacks),
 - MDN[https://developer.mozilla.org/en-US/docs/Web/Accessibility], 
@@ -160,12 +160,16 @@ Non-animated by default, only moving if the setting exists and is unchecked (lev
 <br/>
 
 # Testing a11y
+* Mindful on:
+    What can be automated(HTML/ARIA validation, Form labels, Color contrast, Accessible names, Focus management,Specifying a language), 
+    and what can’t be(Focus order, Text alternative quality, Screen reader testing, Contrast over images/gradients)
+* Approach: Linting, Unit tests(Jest, Jest DOM, Testing Library), Integration testing([Cypress](https://github.com/component-driven/cypress-axe) or WebdriverIO), E2E testing, actual user testing and feedback for your product
 * Keyboard Navigation: tab key, skip links, esc key, use of arrow keys, space key to select/deselect
 * Zoom to 200% to check reflow of layouts, components, responsive designs
-* use of voice over screen reader
+* Use of voice over screen reader
 * Devtools testing - Chrome(Accessibilty Information Tab, lighthouse, [color contrast checker](https://developer.chrome.com/docs/devtools/accessibility/contrast#fix-low-contrast)), firefox(contrast ratio inspector), 
-* visual modes: light/dark, high contrast mode
-* missing transcripts or captions for media contents
+* Visual modes: light/dark, high contrast mode
+* Missing transcripts or captions for media contents
 * Accessibility Insights for Web from Microsoft is another great tool!
 
 
