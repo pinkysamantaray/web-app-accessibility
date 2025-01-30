@@ -51,7 +51,9 @@ examples: https://target.com
 
 
 # Semantic HTML basics 
-* Use of headings h1-h6
+Semantic HTML plays a critical role in making web content accessible and understandable by assistive technologies. Using the correct HTML elements for their intended purpose improves both usability and searchability.
+
+* Use of headings `h1-h6`: ensure a logical heading structure to aid screen reader users in navigating content.
 * [Skip-links](https://dequeuniversity.com/rules/axe/4.10/skip-link) ex: #header, #content, (navigate through sections), good for SEOs, good for overall structure of the page
 * Element level vs. page level language `lang="fr"` for VO
 * Accessible names: 
