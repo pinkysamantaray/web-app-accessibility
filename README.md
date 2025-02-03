@@ -78,6 +78,7 @@ Semantic HTML plays a critical role in making web content accessible and underst
     - Will your code work with assistive technologies?[https://a11ysupport.io/]
     - [Chakra ui](https://www.chakra-ui.com/)
     - [AssistivLabs](https://assistivlabs.com/) to run screen readers in the cloud
+    - Enterprise support([AccessiWay](https://www.accessiway.com/), example: [Sezane](https://www.sezane.com/nl-nl) )
 
  
 ### image alt text

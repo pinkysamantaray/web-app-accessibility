@@ -147,13 +147,14 @@ Automated tools help, but human testing is essential.
 - **Automated checks:** HTML validation, form labels, focus management.
 - **Manual testing:** Screen readers, keyboard navigation, color contrast testing.
 - **Useful tools:**
-  - [Chrome Accessibility DevTools](https://developer.chrome.com/docs/devtools/accessibility/)
+  - DevTools: [Chrome Accessibility DevTools](https://developer.chrome.com/docs/devtools/accessibility/)
   - [Cypress-axe](https://github.com/component-driven/cypress-axe)
   - [Accessibility Insights for Web](https://accessibilityinsights.io/)
   - [Chakra UI](https://www.chakra-ui.com/) - A React component library focused on accessibility.
   - [AssistivLabs](https://assistivlabs.com/) - Test with real assistive technologies in the cloud.
   - [Deque University](https://dequeuniversity.com/) - Training and tools for digital accessibility.
   - [Web Accessibility Checklist](https://dequeuniversity.com/checklists/web/) - A checklist for accessibility compliance.
+  - Enterprise support([AccessiWay](https://www.accessiway.com/), example: [Sezane](https://www.sezane.com/nl-nl) )
 
 ## Building Accessibility Culture in Teams
 
@@ -170,5 +171,5 @@ Accessible design isn’t just a legal requirement—it’s a fundamental part o
 
 ---
 
-*Notes derived from accessibility courses by Marcy Sutton Todd.*
+*Notes derived from accessibility courses by Marcy Sutton.*
 
