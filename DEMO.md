@@ -89,11 +89,12 @@ Using semantic HTML enhances accessibility:
 - **Landmark elements (`header`, `nav`, `main`, etc.)** for navigation.
 - **Descriptive alt text** for images.
 - **Skip-links** to improve keyboard navigation. [skip-links](https://dequeuniversity.com/rules/axe/4.10/skip-link) allow keyboard users to jump directly to main content
-- **Accessible form labels** Names are always announced. 
+- **Accessible Names and Descriptions** Names are always announced. 
     For example, the accessible name for a `<button>`, `<a>`, or `<td>` comes from the text between the opening and closing tags. 
     Other elements, such as form `<textarea>`, `<fieldset>`, and `<table>` get their accessible name from the content of associated elements; for these elements, the accessible name comes from the `<label>` with a for attribute, `<legend>`, and `<caption>` respectively. 
-    aria-label(if the default is missing) and aria-labelledby/aria-describedby(reference to an entire template) attributes, and even title(mouse hover) and placeholder
+    aria-label(if the default is missing) and aria-labelledby/aria-describedby(reference to an entire template) attributes, and Fallback names derived from titles(mouse hover) and placeholders
     https://www.w3.org/TR/accname-1.2/
+    https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/
 - **Lists**: Use `ul` and `ol` for lists instead of non-semantic elements like `div` or `span`.
 - **Avoid "div soup"**: Use semantic elements instead of excessive `div` elements for better readability
 - **Form accessibility**:
@@ -115,7 +116,7 @@ Using semantic HTML enhances accessibility:
 ### Image Alt Text
 
 Use alt attributes correctly:
-
+- [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/)
 - **Decorative images:** Use `alt=""` to skip over them.
 - **AI-generated alt text:** Consider tools like [alttext.ai](https://alttext.ai/).
 - **Background images:** Use ARIA attributes to describe them.
