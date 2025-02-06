@@ -93,8 +93,9 @@ Using semantic HTML enhances accessibility:
     For example, the accessible name for a `<button>`, `<a>`, or `<td>` comes from the text between the opening and closing tags. 
     Other elements, such as form `<textarea>`, `<fieldset>`, and `<table>` get their accessible name from the content of associated elements; for these elements, the accessible name comes from the `<label>` with a for attribute, `<legend>`, and `<caption>` respectively. 
     aria-label(if the default is missing) and aria-labelledby/aria-describedby(reference to an entire template) attributes, and Fallback names derived from titles(mouse hover) and placeholders
-    https://www.w3.org/TR/accname-1.2/
-    https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/
+    > [!TIP]
+    > Helpful resouces: https://www.w3.org/TR/accname-1.2/, https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/.
+    
 - **Lists**: Use `ul` and `ol` for lists instead of non-semantic elements like `div` or `span`.
 - **Avoid "div soup"**: Use semantic elements instead of excessive `div` elements for better readability
 - **Form accessibility**:
@@ -140,6 +141,9 @@ Ensuring accessibility for audio and video content:
 - **Reduced Motion:** Implement `prefers-reduced-motion` media queries to accommodate users sensitive to motion.
 - **Dark Mode Support:** Utilize `prefers-color-scheme` for adaptive themes.
 - **Color Contrast:** Ensure WCAG-compliant contrast ratios for readability. [accessible color contrast](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.0#qr-visual-audio-contrast-contrast)
+
+> [!WARNING]
+> Avoid going dark with anti patterns.
 
 ## Testing Accessibility
 
