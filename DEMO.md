@@ -93,8 +93,8 @@ Using semantic HTML enhances accessibility:
     For example, the accessible name for a `<button>`, `<a>`, or `<td>` comes from the text between the opening and closing tags. 
     Other elements, such as form `<textarea>`, `<fieldset>`, and `<table>` get their accessible name from the content of associated elements; for these elements, the accessible name comes from the `<label>` with a for attribute, `<legend>`, and `<caption>` respectively. 
     aria-label(if the default is missing) and aria-labelledby/aria-describedby(reference to an entire template) attributes, and Fallback names derived from titles(mouse hover) and placeholders
-    > [!TIP]
-    > Helpful resouces: https://www.w3.org/TR/accname-1.2/, https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/.
+> [!TIP]
+> Helpful resouces: https://www.w3.org/TR/accname-1.2/, https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/.
     
 - **Lists**: Use `ul` and `ol` for lists instead of non-semantic elements like `div` or `span`.
 - **Avoid "div soup"**: Use semantic elements instead of excessive `div` elements for better readability
