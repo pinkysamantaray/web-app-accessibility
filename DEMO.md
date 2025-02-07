@@ -146,11 +146,19 @@ Ensuring accessibility for audio and video content:
 > Avoid going dark with anti patterns.
 
 ## Testing Accessibility
+How to Test a website:
+  - Use default browser tools, Google Lighthouse (Built into Chrome DevTools), example: [cursorless](https://www.cursorless.org/docs/)
+  - WAVE (Web Accessibility Evaluation Tool) – https://wave.webaim.org
+  - Plugins like:
+    - Accessibility Insights for Web by Microsoft > Ad hoc tools
+    - WAVE Evaluation Tool
+    - axe Accessibility Checker (Browser Extension) – https://www.deque.com/axe/
+    
 
 Automated tools help, but human testing is essential.
 
 - **Automated checks:** HTML validation, form labels, focus management.
-- **Manual testing:** Screen readers, keyboard navigation, color contrast testing.
+- **Manual testing:** Screen readers, keyboard navigation, color contrast testing, testing reflow by zooming to 200%
 - **Useful tools:**
   - DevTools: [Chrome Accessibility DevTools](https://developer.chrome.com/docs/devtools/accessibility/)
   - [Cypress-axe](https://github.com/component-driven/cypress-axe)
