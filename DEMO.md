@@ -104,6 +104,7 @@ Using semantic HTML enhances accessibility:
 - **Focus management**:
   - Ensure users can navigate via keyboard by using `tabindex` correctly.
   - Prevent keyboard traps by allowing easy exit from modal dialogs.
+  - example: [Svelte Actions use:trapFocus](https://svelte.dev/tutorial/svelte/actions) 
 - **Inert attribute**: Use `inert` to make off-screen elements non-focusable, improving user navigation.
 - **CSS Accessibility**:
   - Utilize `.sr-only` classes (e.g., in Tailwind) for screen reader-only content.
