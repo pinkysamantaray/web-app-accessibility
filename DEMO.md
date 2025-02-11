@@ -83,8 +83,7 @@ Different operating systems have unique accessibility tools:
 
 ## Semantic HTML and Best Practices
 
-Using semantic HTML enhances accessibility:
-
+Using semantic HTML enhances accessibility: (Readability, Predictability & Adaptability)
 - **Proper headings (`h1-h6`)** for structure.
 - **Landmark elements (`header`, `nav`, `main`, etc.)** for navigation.
 - **Descriptive alt text** for images.
@@ -102,15 +101,38 @@ Using semantic HTML enhances accessibility:
   - Ensure `label` elements are correctly associated with `input` fields using `for` attributes.
   - Use `fieldset` and `legend` for grouping related form controls.
 - **Focus management**:
-  - Ensure users can navigate via keyboard by using `tabindex` correctly.
+  - Visible Focus with contrast, outline
+  - Focus order: ensure users can navigate via keyboard by using `tabindex` (-1/0/1-5.../) correctly. 
   - Prevent keyboard traps by allowing easy exit from modal dialogs.
   - example: [Svelte Actions use:trapFocus](https://svelte.dev/tutorial/svelte/actions) 
 - **Inert attribute**: Use `inert` to make off-screen elements non-focusable, improving user navigation.
 - **CSS Accessibility**:
-  - Utilize `.sr-only` classes (e.g., in Tailwind) for screen reader-only content.
-  - Ensure hover effects do not rely solely on color to convey information.
-- **ARIA live regions**: Implement [ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attributes for dynamically updating content, such as notifications or search results.
+  - three states of hidden elements:
+  - Hidden for Everyone: (visibility: hidden or display: none) 
+  - Hidden for Visual Users: 
+    - Utilize `.sr-only` classes (e.g., in Tailwind) for screen reader-only content.
+    - using specific CSS techniques, like positioning the element off-screen. This is often used for providing additional context to screen reader users, such as hidden headings that provide structure and orientation. 
+  - Hidden for Screen Readers: aria-hidden="true". This is handy for situations where visual elements are purely decorative and do not provide additional information, such as icons used alongside text labels.
+ - Ensure hover effects do not rely solely on color to convey information.
+- **ARIA live regions**: Implement [ARIA live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attributes for dynamically updating content, such as notifications or search results(aria-live="off/polite/assertive")
+  ```
+  <div id="announce" aria-live="polite">
+    <p>You have a new message!</p>
+  </div>
+  ```
 - Element level vs. page level language `lang="fr"` for Voice Over
+- clear and constructive error messages
+- visual aids with icons
+  ```
+  <a href="report.pdf">
+    <img src="pdf-icon.png" alt="" aria-hidden="true">
+    Download Report (PDF)
+  </a>
+  <a href="report.doc">
+    <img src="word-icon.png" alt="" aria-hidden="true">
+    Download Report (DOC)
+  </a>
+  ```
 
 
 ## Media Accessibility
@@ -185,5 +207,5 @@ Accessible design isn’t just a legal requirement—it’s a fundamental part o
 
 ---
 
-*Notes derived from accessibility courses by Marcy Sutton.*
+*Some notes derived from accessibility courses by Marcy Sutton.*
 
