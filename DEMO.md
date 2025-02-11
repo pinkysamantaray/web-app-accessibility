@@ -190,6 +190,7 @@ Automated tools help, but human testing is essential.
   - [AssistivLabs](https://assistivlabs.com/) - Test with real assistive technologies in the cloud.
   - [Deque University](https://dequeuniversity.com/) - Training and tools for digital accessibility.
   - [Web Accessibility Checklist](https://dequeuniversity.com/checklists/web/) - A checklist for accessibility compliance.
+  - [The Accessibility Developer Guide](https://www.accessibility-developer-guide.com/)
   - Enterprise support([AccessiWay](https://www.accessiway.com/), example: [Sezane](https://www.sezane.com/nl-nl) )
 
 ## Building Accessibility Culture in Teams
