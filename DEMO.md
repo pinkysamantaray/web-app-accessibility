@@ -86,12 +86,24 @@ Different operating systems have unique accessibility tools:
 Using semantic HTML enhances accessibility: (Readability, Predictability & Adaptability)
 - **Proper headings (`h1-h6`)** for structure.
 - **Landmark elements (`header`, `nav`, `main`, etc.)** for navigation.
-- **Descriptive alt text** for images.
+- **Descriptive alt text** for images. 
 - **Skip-links** to improve keyboard navigation. [skip-links](https://dequeuniversity.com/rules/axe/4.10/skip-link) allow keyboard users to jump directly to main content
 - **Accessible Names and Descriptions** Names are always announced. 
     For example, the accessible name for a `<button>`, `<a>`, or `<td>` comes from the text between the opening and closing tags. 
     Other elements, such as form `<textarea>`, `<fieldset>`, and `<table>` get their accessible name from the content of associated elements; for these elements, the accessible name comes from the `<label>` with a for attribute, `<legend>`, and `<caption>` respectively. 
     aria-label(if the default is missing) and aria-labelledby/aria-describedby(reference to an entire template) attributes, and Fallback names derived from titles(mouse hover) and placeholders
+    ```
+    <span
+      role="checkbox"
+      aria-checked="false"
+      tabindex="0"
+      aria-labelledby="tac"></span>
+    <span id="tac">I agree to the Terms and Conditions.</span>
+    ```
+    
+    > [!INFO]
+    > [ARIA prohibited items](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label#associated_roles)
+
 > [!TIP]
 > Helpful resouces: https://www.w3.org/TR/accname-1.2/, https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/.
     
@@ -144,6 +156,16 @@ Use alt attributes correctly:
 - **Decorative images:** Use `alt=""` to skip over them.
 - **AI-generated alt text:** Consider tools like [alttext.ai](https://alttext.ai/).
 - **Background images:** Use ARIA attributes to describe them.
+  ```
+  <div id="fooSection" style="background-image: foo.jpg">
+    <!-- Text alternative for the background image on div#fooSection -->
+    <span role="img" aria-label="fooSection"></span>
+
+    <h2>My heading</h2>
+    <p>Some more text</p>
+    <a href="foo.html">Call to action</a>
+  <div>
+  ```
 
 ### Transcripts and Captions
 
