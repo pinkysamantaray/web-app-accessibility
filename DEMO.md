@@ -100,8 +100,8 @@ Using semantic HTML enhances accessibility: (Readability, Predictability & Adapt
       aria-labelledby="tac"></span>
     <span id="tac">I agree to the Terms and Conditions.</span>
     ```
-    
-    > [!INFO]
+
+    > [!NOTE]
     > [ARIA prohibited items](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label#associated_roles)
 
 > [!TIP]
